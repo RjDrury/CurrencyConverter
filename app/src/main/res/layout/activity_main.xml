@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ca.rdrury.currencyconverter.MainActivity">
+
+    <TextView
+        android:id="@+id/askCurrency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="What currency would you like to conver from/to?"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/money"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="58dp" />
+
+
+
+    <EditText
+        android:id="@+id/numberToConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter the amount "
+        android:inputType="number"
+        android:layout_below="@+id/radioSex"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        />
+
+    <Button
+        android:id="@+id/covertActivated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="timeToConvert"
+        android:text="Convert"
+        android:layout_below="@+id/numberToConvert"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp" />
+
+    <RadioGroup
+        android:id="@+id/radioSex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/askCurrency"
+        android:layout_alignLeft="@+id/numberToConvert"
+        android:layout_alignStart="@+id/numberToConvert">
+
+        <RadioButton
+            android:id="@+id/cadToUS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/radioSex"
+            android:layout_alignStart="@+id/radioSex"
+            android:layout_below="@+id/askCurrency"
+            android:layout_weight="1"
+            android:checked="true"
+            android:duplicateParentState="false"
+            android:text="CAD to US"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/usToCad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/covertActivated"
+            android:layout_alignStart="@+id/covertActivated"
+            android:layout_below="@+id/radioSex"
+            android:layout_weight="1"
+            android:text="Us to CAD"
+            android:textSize="16sp" />
+
+    </RadioGroup>
+
+</RelativeLayout>
